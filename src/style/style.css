@@ -257,3 +257,35 @@ a.text-link:hover{opacity: .9;}
   background: linear-gradient(135deg, rgba(91,140,255,.25), rgba(110,231,183,.22));
   color: var(--accent);
 }
+
+.site-footer{
+  border-top: 1px solid rgba(255,255,255,.08);
+  background: rgba(11,18,32,.6);
+}
+
+.footer-inner{
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; padding: 18px 0;
+}
+
+.site-footer p{ 
+  color: var(--muted); 
+}
+
+.back-to-top{
+  position: fixed; 
+  right: 22px; 
+  bottom: 22px; 
+  z-index: 90;
+  width: 44px; 
+  height: 44px; 
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,.15); 
+  background: rgba(17,26,49,.9);
+  color: var(--text); 
+  font-size: 20px; 
+  display: grid; 
+  place-items: center;
+  box-shadow: var(--shadow); 
+  text-decoration: none;
+}
