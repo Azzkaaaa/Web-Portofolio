@@ -62,19 +62,20 @@ a.text-link:hover{opacity: .9;}
 
 .pre-title.center{margin: 0 auto 28px;}
 
-.site-header{
-  position: sticky;
-  top: 0;
+.site-header {
+  position: sticky; 
+  top: 0; 
   z-index: 100;
   backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(11,18,32,0.7);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
 .nav{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0;
+  padding: 18px 0;
 }
 
 .logo {
@@ -82,3 +83,93 @@ a.text-link:hover{opacity: .9;}
   padding: 8px 12px; border-radius: 10px;
   background: linear-gradient(135deg, rgba(91,140,255,.18), rgba(110,231,183,.16));
 }
+
+.nav-links ul{
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a{
+  color: var(--muted);
+  font-weight: 600;
+  padding: 8px 2px;
+  position: relative;
+}
+
+.nav-links a:hover{
+  color: var(--text);
+}
+
+.nav-links  a::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: .25s ease;
+}
+
+.nav-links a:hover::after { 
+  transform: scaleX(1); 
+}
+
+.nav-toggle { 
+  display: none; 
+}
+
+.burger{
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, .1);
+  border-radius: 10px;
+  background: transparent;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.burger span{
+  width: 22px; 
+  height: 2px; 
+  background: var(--text); 
+  display:block; 
+  transition: .3s ease;
+}
+
+.nav-toggle:checked + .burger .line-1 { transform: translateY(7px) rotate(45deg); }
+.nav-toggle:checked + .burger .line-2 { opacity: 0; }
+.nav-toggle:checked + .burger .line-3 { transform: translateY(-7px) rotate(-45deg); }
+
+.hero-wrap{
+  display: grid;
+  gap: 32px;
+  grid-template-columns: 1.1fr .9fr;
+  align-items: center;
+}
+
+.hero-name{
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 800;
+  margin: 8px 0 10px;
+  letter-spacing: .02em;
+}
+
+.hero-sub{
+  color: var(--muted);
+  max-width: 56ch;
+}
+
+.hero-cta{
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
