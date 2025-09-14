@@ -473,3 +473,14 @@ html:has(#theme-toggle:checked) .theme-btn{
 html:has(#theme-toggle:checked) .theme-btn::before{ 
   content:"☀️"; 
 }
+
+@media (min-width: 821px){
+  .nav{
+    justify-content: flex-start;    
+  }
+
+  .theme-btn{
+    margin-left: auto;              
+    margin-right: 14px;             
+  }
+}
