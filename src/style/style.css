@@ -224,7 +224,8 @@ a.text-link:hover{opacity: .9;}
 }
 
 .avatar{
-  width: 320px; max-width: 100%; aspect-ratio: 1/1;
+  width: clamp(220px, 32vw, 300px);
+  max-width: 100%; aspect-ratio: 1/1;
   border-radius: 50%; overflow: hidden;
   box-shadow: 0 12px 40px rgba(0,0,0,.35), 0 0 0 6px rgba(91,140,255,.12);
   margin-inline: auto;
